@@ -1,5 +1,6 @@
 int buzzer_pin = 7;
 int button_pin = 6;
+
 void setup() {
   pinMode(buzzer_pin, OUTPUT);
   pinMode(button_pin, INPUT);
@@ -7,6 +8,7 @@ void setup() {
 }
 
 void loop() {
+  
   int button_status = digitalRead(button_pin);
 
   Serial.print("Button Status : ");
