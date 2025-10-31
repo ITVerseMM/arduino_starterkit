@@ -7,13 +7,13 @@ void setup() {
 }
 
 void loop() {
-  int sensorValue = analogRead(POT_PIN);
-  int outputValue = map(sensorValue, 0, 1023, 0, 255);  // 2. Map the input value to the PWM output range (0 to 255)                                                            
+  int potValue = analogRead(POT_PIN);
+  int outputValue = map(potValue, 0, 1023, 0, 255);  // 2. Map the input value to the PWM output range (0 to 255)                                                            
   
   analogWrite(LED_PIN, outputValue);                    // 3. Write the mapped value to the LED to change its brightness 
 
   Serial.print("Sensor = ");
-  Serial.print(sensorValue);
+  Serial.print(potValue);
   Serial.print("\t Output = ");
   Serial.println(outputValue);
 
